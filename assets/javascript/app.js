@@ -26,13 +26,13 @@ var
     {
       question: "After Kenny died for good, this character was the gang's first replacement?",
       choices: ["Token", "Butters", "Jimmy", "Timmy"],
-      correctAnswer: ""
+      correctAnswer: "Butters"
       
     }, 
     {
       question: "Cartman discovers the identity of his father and is shocked to learn it's?",
       choices: ["Chef", "Big Gay Al", "His Mother", "Mr. Garrison"],
-      correctAnswer: ""
+      correctAnswer: "His Mother"
       
     }, 
     {
@@ -44,7 +44,7 @@ var
     {
       question: "In the episode Cartman gets an Anal Probe who was taken by aliens?",
       choices: ["Stan", "Shelly", "Cartman", "Ike"],
-      correctAnswer: ""
+      correctAnswer: "Ike"
       
     },
     {
@@ -56,7 +56,7 @@ var
     {
       question: "In the episode Chicken lover, Officer Barbrady is removed from duty because he can't read. Who takes his place?",
       choices: ["Chef", "Cartman", "Mr. Garrison", "Stan's Uncle Jimbo"],
-      correctAnswer: ""
+      correctAnswer: "Cartman"
       
     },
     {
