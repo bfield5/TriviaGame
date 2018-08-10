@@ -1,8 +1,9 @@
 $(document).ready(function() {
 
 var questionCounter = 0;
-var qTime = 15;
-var 
+var questTime = 15;
+var correctGuesses = 0;
+var incorrectGuesses =0;
 
 
 
@@ -12,7 +13,7 @@ var
  // question & answer array
  var questions = [
     {
-      question: "The animated series takes place in which state?",
+      question: "The South Park animated series takes place in which state?",
       choices: ["Washington", "Colorado", "California", "Montana"],
       correctAnswer: "Colorado",
       

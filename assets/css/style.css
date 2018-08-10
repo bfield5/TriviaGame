@@ -15,7 +15,7 @@ body {
     margin: 0 auto;
 }
 .card {
-  top: 55%;
+  top: 25%;
   opacity: 0.5;
   color: black;
 
@@ -24,6 +24,14 @@ body {
   
   color: black;
   opacity: 0.7;
+  padding: 0;
  
+  
+}
+
+
+.btn-primary {
+  background: white;
+  color: black;
   
 }
