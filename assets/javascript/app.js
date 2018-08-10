@@ -38,7 +38,7 @@ var incorrectGuesses =0;
     }, 
     {
       question: "True or False: Kyle is in love with Wendy and vomits whenever she speaks to him",
-      choices: ["True", "False"],
+      choices: ["True", "False","", ""],
       correctAnswer: "True"
       
     },
@@ -85,10 +85,10 @@ $(".answers").on("click", function() {
   $("#game").hide();
   $("#answerDisplay").show();
   if (userChoice === questions[count].correctAnswer) {
-    $("#answerDisplay").text("you're right");
+    $("#answerDisplay").text(questions[count].correctAnswer + " Is the correct choice!");
     correctGuesses++;
   } else {
-    $("#answerDisplay").text("you're wrong");
+    $("#answerDisplay").text("Wrong Choice");
     incorrectGuesses++;
   }
   count++;

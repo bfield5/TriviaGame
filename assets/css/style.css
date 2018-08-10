@@ -35,3 +35,12 @@ body {
   color: black;
   
 }
+#answerDisplay {
+  top: 30%;
+  opacity: 0.5;
+  color: black;
+  font-size: 36px;
+  text-align: center;
+  height: 350px;
+  line-height: 300px;
+}
