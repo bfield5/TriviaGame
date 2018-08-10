@@ -65,22 +65,47 @@ var incorrectGuesses =0;
       choices: ["Mr. Garrison", "Mr. Mackey", "Mrs. Crabtree", "PC Principle"],
       correctAnswer: "Mr. Mackey"
       
-    }
+    }];
+   var count = 0;
    
-   
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+function renderQuestion () { 
+  $("#answerDisplay").hide();
+  $("#game").show();
+    $("#questionHolder").text(questions[count].question);
+    $("#answer1").text(questions[count].choices[0]);
+    $("#answer2").text(questions[count].choices[1]);
+    $("#answer3").text(questions[count].choices[2]);
+    $("#answer4").text(questions[count].choices[3]);
 }
+renderQuestion ();
+
+
+$(".answers").on("click", function() {
+  var userChoice = $(this).html();
+  $("#game").hide();
+  $("#answerDisplay").show();
+  if (userChoice === questions[count].correctAnswer) {
+    $("#answerDisplay").text("you're right");
+    correctGuesses++;
+  } else {
+    $("#answerDisplay").text("you're wrong");
+    incorrectGuesses++;
+  }
+  count++;
+  setTimeout(renderQuestion, 3000);
+  
+  
+
+});
+
+
+
+
+
+
+
+
+
+
+
+});
