@@ -1,7 +1,6 @@
 $(document).ready(function() {
 
-var questionCounter = 0;
-var questTime = 15;
+var questTime = 10;
 var correctGuesses = 0;
 var incorrectGuesses =0;
 
@@ -67,6 +66,9 @@ var incorrectGuesses =0;
       
     }];
    var count = 0;
+   var timerId = setInterval(countdown, 1000);
+
+    
    
 function renderQuestion () { 
   $("#answerDisplay").hide();
@@ -80,6 +82,8 @@ function renderQuestion () {
 renderQuestion ();
 
 
+
+
 $(".answers").on("click", function() {
   var userChoice = $(this).html();
   $("#game").hide();
@@ -87,19 +91,42 @@ $(".answers").on("click", function() {
   if (userChoice === questions[count].correctAnswer) {
     $("#answerDisplay").text(questions[count].correctAnswer + " Is the correct choice!");
     correctGuesses++;
+    $("#rGuess").text("Right Guesses: " + correctGuesses);
+    clearTimeout(timerId);
+    
+    
   } else {
     $("#answerDisplay").text("Wrong Choice");
     incorrectGuesses++;
+    $("#wGuess").text("Wrong Guesses: " + incorrectGuesses);
+    
   }
   count++;
   setTimeout(renderQuestion, 3000);
+
+  
+  
   
   
 
 });
-
-
-
+ 
+    function countdown() {
+          
+      if (questTime == -1) {
+          clearTimeout(timerId);
+          
+          
+      } else {
+        $("#qTimer").text("Question Timer: " + questTime);
+          questTime--;
+        
+          
+          
+      }
+    }
+  
+console.log(correctGuesses);
 
 
 

@@ -44,3 +44,9 @@ body {
   height: 350px;
   line-height: 300px;
 }
+
+#qTimer .h3 h3 {
+  height: 28px;
+  font-size: 1.75rem;
+  font-weight: 500;
+}
